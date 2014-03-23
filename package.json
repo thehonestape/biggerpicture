@@ -1,0 +1,23 @@
+{
+  "name": "pullquote",
+  "version": "0.0.0",
+  "description": "pullquote =========",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thehonestape/pullquote.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "1e7faa8115e522fb368f27726b76344afbe77c69",
+  "dependencies": {
+    "express": "~3.5.0",
+    "jade": "~1.3.0",
+    "stylus": "~0.42.3",
+    "nib": "~1.0.2"
+  }
+}
