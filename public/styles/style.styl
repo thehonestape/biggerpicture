@@ -1,0 +1,258 @@
+/*
+ * Import nib
+ */
+@import 'nib'
+
+/*
+ * Grab a custom font from Google
+ */
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,800,700');
+
+/*song
+ * Nib provides a CSS reset
+ */
+global-reset()
+
+body
+html
+  background red
+  color #fff
+  height 100%
+  font-family 'Open Sans', sans-serif;
+a
+  text-decoration none
+  color dark
+  &:hover
+    color yellow
+
+
+header
+  color #fff
+  font-size 25px
+  text-align center
+#wrapper
+  background red
+  height 100%
+  margin 0 auto -40px
+  padding 30px
+  min-height 500px
+  &:after
+    content ''
+    display block
+    height 40px
+.row
+  max-width 90% !important
+
+.album
+  display block
+  text-align center
+  width 100%      
+  overflow visible
+
+
+  .artwork  
+    width 100%    
+    display inline-block
+    margin 20px 0px 20px 0px
+    display flex
+    justify-content center
+    align-items center    
+
+    img
+      width 100%
+
+.audio-player
+  position absolute
+  top 30%
+  left 30%
+
+#soundcloud-player
+  margin-top 40px
+  position relative
+
+.tracklist
+    margin-left 10px
+    font-family 'Open Sans', sans-serif;
+    text-transform uppercase
+    .song 
+      display block
+      margin-bottom 30px
+    .name 
+      font-weight 700
+      font-size 30px
+      color dark
+      display block
+      float left
+      margin-top 10px
+    .featuring
+      font-size 14px
+      color white
+    .track-number
+      color yellow
+      display inline-block
+      font-weight 800
+      font-size 50px
+      float left
+    .track
+      float left
+      width 100%
+.song-details
+      float left
+      font-size 12px
+      color dark
+      margin-top 10px
+      margin-left 5px
+      .name
+         font-weight 700
+         font-size 14px
+         width 100%
+         margin-top 0px
+      .producer
+          font-weight 400
+          width 100%
+      a
+        color dark
+        text-decoration none
+        transition all .25s ease
+        &:hover
+          color yellow
+.cooming-soon
+  font-size 12px
+  color dark
+  height 200px
+  line-height 200px
+.small-artwork
+  display inline-block
+  float left
+  width 200px !important
+  height 200px !important
+  border 1px solid dark
+  margin-right 10px
+.title 
+  display inline-block
+  font-weight 700
+  float left
+  line-height 200px
+  color dark
+
+.download
+  font-size 20px
+  margin-top 20px
+  border 1px solid dark
+  background transparent
+  padding 20px
+  width 100%
+  border-radius 5px
+  text-transform uppercase
+  float left
+  color dark    
+  font-family 'Open Sans', sans-serif;
+  font-weight 800
+  transition all .25s ease
+  &:hover
+    background dark
+    color red
+
+.audio
+  display block
+  margin-top 40px
+.links
+  display inline-block
+.avatar
+  width 200px
+  height 200px
+  border-radius 100px
+  overflow hidden
+  margin-bottom 20px
+  display inline-block
+.data
+.artist-name
+.artist-city
+  color dark
+  font-size 20px
+  display block
+  width 100%
+  text-align center
+.artist-name
+  font-weight 700
+  font-size 30px
+.personal
+  margin-top 40px
+  padding-top 20px
+  border-top 1px solid dark
+  text-align center
+  display inline-block
+  a
+    margin-right 10px
+.bio
+  font-size 16px
+  font-weight 400
+  line-height 25px
+  color dark
+  text-align left
+  a
+    text-decoration underline
+    margin-right 5px
+    &:hover
+      color yellow
+
+  p 
+    margin-bottom 15px
+
+.logos
+  display block
+  margin-top 8px
+  float left
+  display inline-block
+  &:hover
+    a
+      opacity .8
+  .logo
+    display inline-block
+    margin-right 5px
+
+.footer  
+  width 100%
+  height 40px
+  background #05273A
+  position fixed
+  bottom 0
+
+.controls
+  position absolute
+  bottom 0
+  left 60%
+
+
+button.play
+button.next
+button.prev
+  background-color dark
+  height 40px
+  padding 10px
+  border none
+  border-radius
+  color white
+  float left
+  &:hover
+    opacity .6
+
+
+
+
+@css {
+  .ui360,
+.sm2-360ui {
+  /* size of the container for the circle, etc. */
+  width:50px;
+  height:50px;
+}
+}
+
+
+@media (max-width: 768px)
+
+  #wrapper 
+    padding 2px
+
+

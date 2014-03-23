@@ -1,0 +1,392 @@
+/*
+ * Import nib
+ */
+/*
+ * Grab a custom font from Google
+ */
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,800,700");
+/*song
+ * Nib provides a CSS reset
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+body,
+html {
+  background: #f00;
+  color: #fff;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: dark;
+}
+a:hover {
+  color: #ff0;
+}
+header {
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+}
+#wrapper {
+  background: #f00;
+  height: 100%;
+  margin: 0 auto -40px;
+  padding: 30px;
+  min-height: 500px;
+}
+#wrapper:after {
+  content: '';
+  display: block;
+  height: 40px;
+}
+.row {
+  max-width: 90% !important;
+}
+.album {
+  display: block;
+  text-align: center;
+  width: 100%;
+  overflow: visible;
+}
+.album .artwork {
+  width: 100%;
+  display: inline-block;
+  margin: 20px 0px 20px 0px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.album .artwork img {
+  width: 100%;
+}
+.audio-player {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+}
+#soundcloud-player {
+  margin-top: 40px;
+  position: relative;
+}
+.tracklist {
+  margin-left: 10px;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+}
+.tracklist .song {
+  display: block;
+  margin-bottom: 30px;
+}
+.tracklist .name {
+  font-weight: 700;
+  font-size: 30px;
+  color: dark;
+  display: block;
+  float: left;
+  margin-top: 10px;
+}
+.tracklist .featuring {
+  font-size: 14px;
+  color: #fff;
+}
+.tracklist .track-number {
+  color: #ff0;
+  display: inline-block;
+  font-weight: 800;
+  font-size: 50px;
+  float: left;
+}
+.tracklist .track {
+  float: left;
+  width: 100%;
+}
+.song-details {
+  float: left;
+  font-size: 12px;
+  color: dark;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+.song-details .name {
+  font-weight: 700;
+  font-size: 14px;
+  width: 100%;
+  margin-top: 0px;
+}
+.song-details .producer {
+  font-weight: 400;
+  width: 100%;
+}
+.song-details a {
+  color: dark;
+  text-decoration: none;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.song-details a:hover {
+  color: #ff0;
+}
+.cooming-soon {
+  font-size: 12px;
+  color: dark;
+  height: 200px;
+  line-height: 200px;
+}
+.small-artwork {
+  display: inline-block;
+  float: left;
+  width: 200px !important;
+  height: 200px !important;
+  border: 1px solid dark;
+  margin-right: 10px;
+}
+.title {
+  display: inline-block;
+  font-weight: 700;
+  float: left;
+  line-height: 200px;
+  color: dark;
+}
+.download {
+  font-size: 20px;
+  margin-top: 20px;
+  border: 1px solid dark;
+  background: transparent;
+  padding: 20px;
+  width: 100%;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  float: left;
+  color: dark;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.download:hover {
+  background: dark;
+  color: #f00;
+}
+.audio {
+  display: block;
+  margin-top: 40px;
+}
+.links {
+  display: inline-block;
+}
+.avatar {
+  width: 200px;
+  height: 200px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+.data,
+.artist-name,
+.artist-city {
+  color: dark;
+  font-size: 20px;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.artist-name {
+  font-weight: 700;
+  font-size: 30px;
+}
+.personal {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid dark;
+  text-align: center;
+  display: inline-block;
+}
+.personal a {
+  margin-right: 10px;
+}
+.bio {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  color: dark;
+  text-align: left;
+}
+.bio a {
+  text-decoration: underline;
+  margin-right: 5px;
+}
+.bio a:hover {
+  color: #ff0;
+}
+.bio p {
+  margin-bottom: 15px;
+}
+.logos {
+  display: block;
+  margin-top: 8px;
+  float: left;
+  display: inline-block;
+}
+.logos:hover a {
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+}
+.logos .logo {
+  display: inline-block;
+  margin-right: 5px;
+}
+.footer {
+  width: 100%;
+  height: 40px;
+  background: #05273a;
+  position: fixed;
+  bottom: 0;
+}
+.controls {
+  position: absolute;
+  bottom: 0;
+  left: 60%;
+}
+button.play,
+button.next,
+button.prev {
+  background-color: dark;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  color: #fff;
+  float: left;
+}
+button.play:hover,
+button.next:hover,
+button.prev:hover {
+  opacity: 0.6;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+  filter: alpha(opacity=60);
+}
+.ui360,.sm2-360ui {
+/* size of the container for the circle, etc. */
+width:50px;
+height:50px;
+}
+@media (max-width: 768px) {
+  #wrapper {
+    padding: 2px;
+  }
+}
