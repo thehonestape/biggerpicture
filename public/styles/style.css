@@ -101,7 +101,6 @@ a img {
 }
 body,
 html {
-  background: #f00;
   color: #fff;
   height: 100%;
   font-family: 'Open Sans', sans-serif;
@@ -117,6 +116,11 @@ a:hover {
   position: relative;
   padding: 0px;
 }
+.lockup:hover .headline {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
 .bigpicture {
   width: 100%;
   margin: 0 auto;
@@ -125,9 +129,17 @@ a:hover {
   width: 100%;
 }
 .headline {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
   text-align: center;
   position: absolute;
   width: 100%;
   top: 50%;
   font-size: 2rem;
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  -ms-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
 }
