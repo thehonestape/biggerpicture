@@ -7,12 +7,14 @@ block content
             - if(items.length)
                 - items.forEach(function(item){
                         .lockup
-                            .center
-                                h3.headline=item['title']
-                                .count
-                                    span.icon
-                                        i.fa.fa-picture-o.fa-lg
-                                    span=item['count']
+                            a.center(href=item['urlObj'].href, title=item['title'], target="_blank")
+                                .headline
+                                    h3=item['title']
+                                    hr
+                                    .count
+                                        span.icon
+                                            i.fa.fa-picture-o.fa-lg
+                                        span=item['count']
                             a.bigpicture(href=item['urlObj'].href, title=item['title'], target="_blank")
                                 img(src=item['thumbnail'], alt='Thumbnail')
                 - })

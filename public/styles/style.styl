@@ -20,9 +20,9 @@ html
   font-family 'Inika', serif
 a
   text-decoration none
-  color dark
+  color white
   &:hover
-    color yellow
+    color white
 .lockup
   position relative
   padding 0px
@@ -45,11 +45,32 @@ a
   top 50%
   transition all 2s ease-in-out
 .headline
-  font-size 2rem
-  display block
-.count
+  font-size 1.5rem
+  position relative
   display inline-block
+  hr
+    color white
+    box-shadow none
+/*
+  &:after
+    content ""
+    position absolute
+    height 5px
+    border-bottom 1px solid white
+    border-top 1px solid white
+    top 0
+    width 500px
+  &:before
+    right 100%
+    margin-right 15px
+  &:after
+    left 100%
+    margin-left 15px */
+.count
+  display block
   margin-top 10px
+  position relative
+  font-size 1rem
   .fa
     margin-right 3px
 .caption
