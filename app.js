@@ -23,7 +23,7 @@ app.use(express.static(__dirname + '/public'))
 
 app.get('/', function (req, res) {
   res.render('index',
-  { title : 'Fleezus' }
+  { title : 'Pullquote' }
   )
 })
 app.listen(process.env.PORT || 3000, function(){
