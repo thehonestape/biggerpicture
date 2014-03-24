@@ -8,6 +8,6 @@ block content
                 - items.forEach(function(item){
                         .lockup
                             h3.headline= item['title']
-                            .bigpicture
+                            a.bigpicture(href=item['urlObj'].href, title=item['title'], target="_blank")
                                 img(src=item['thumbnail'], alt='Thumbnail')
                 - })

@@ -43,8 +43,8 @@ app.get('/', function(req, res){
     //for each one of those elements found
         $headlines.each(function(i, item){
       //I will use regular jQuery selectors
-      var $a = $(item).children('a'),
-          $title = $(item).find('h2 a').text();
+      var $a = $(item).find('a'),
+          $title = $(item).find('h2 a').text(),
           $img = $(item).find('.bpImageTop img');
 
 
@@ -52,6 +52,7 @@ app.get('/', function(req, res){
         self.items[i] = {
         title: $title.trim(),
         thumbnail: $img.attr('src'),
+        urlObj: url.parse($a.attr('href'), true)//parse our URL and the query string as well
       };
                       });
       console.log(self.items);
