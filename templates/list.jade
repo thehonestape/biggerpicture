@@ -1,0 +1,13 @@
+extend layout
+
+block content 
+    div(data-role='page')
+        header(data-role='header')
+        div(data-role='content')
+            - if(items.length)
+                ul(data-role='listview')
+                    - items.forEach(function(item){
+                        li
+                            h3= item['title']
+                            //- img(src=item['thumbnail'], alt='Thumbnail')
+                    - })

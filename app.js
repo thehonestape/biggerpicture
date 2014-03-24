@@ -4,6 +4,9 @@
 var express = require('express')
   , stylus = require('stylus')
   , nib = require('nib')
+  , request = require('request')
+  , cheerio = require('cheerio')
+  , url = require('url')
 
 var app = express()
 function compile(str, path) {
@@ -21,11 +24,44 @@ app.use(stylus.middleware(
 ))
 app.use(express.static(__dirname + '/public'))
 
-app.get('/', function (req, res) {
-  res.render('index',
-  { title : 'Pullquote' }
-  )
-})
+
+// Routes
+
+app.get('/', function(req, res){
+  //Tell the request that we want to fetch youtube.com, send the results to a callback function
+      request({uri: 'http://america.aljazeera.com'}, function(err, response, body){
+              var self = this;
+    self.items = new Array();//I feel like I want to save my results in an array
+    //Just a basic error check
+                if(err && response.statusCode !== 200){console.log('Request error.');}
+
+
+    //Use jQuery just as in any regular HTML page
+      var $ = cheerio.load(body)
+      , $body = $('body')
+      , $headlines = $body.find('.col-primary-home');
+    //for each one of those elements found
+        $headlines.each(function(i, item){
+      //I will use regular jQuery selectors
+      var $a = $(item).children('a'),
+          $title = $(item).find('h1.topStories-headline').text();
+          // $img = $a.find('.col-1 img');
+
+
+      //and add all that data to my items array
+        self.items[i] = {
+        title: $title.trim(),
+        // thumbnail: $img.attr('src'),
+      };
+                      });
+      console.log(self.items);
+    //We have all we came for, now let's build our views
+    res.render('list', {
+      title: 'NodeTube',
+      items: self.items
+                      });
+              });
+});
 app.listen(process.env.PORT || 3000, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
