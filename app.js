@@ -29,7 +29,7 @@ app.use(express.static(__dirname + '/public'))
 
 app.get('/', function(req, res){
   //Tell the request that we want to fetch youtube.com, send the results to a callback function
-      request({uri: 'http://america.aljazeera.com'}, function(err, response, body){
+      request({uri: 'https://www.boston.com/bigpicture/'}, function(err, response, body){
               var self = this;
     self.items = new Array();//I feel like I want to save my results in an array
     //Just a basic error check
@@ -39,19 +39,19 @@ app.get('/', function(req, res){
     //Use jQuery just as in any regular HTML page
       var $ = cheerio.load(body)
       , $body = $('body')
-      , $headlines = $body.find('.col-primary-home');
+      , $headlines = $body.find('.headDiv2');
     //for each one of those elements found
         $headlines.each(function(i, item){
       //I will use regular jQuery selectors
       var $a = $(item).children('a'),
-          $title = $(item).find('h1.topStories-headline').text();
-          // $img = $a.find('.col-1 img');
+          $title = $(item).find('h2 a').text();
+          $img = $(item).find('.bpImageTop img');
 
 
       //and add all that data to my items array
         self.items[i] = {
         title: $title.trim(),
-        // thumbnail: $img.attr('src'),
+        thumbnail: $img.attr('src'),
       };
                       });
       console.log(self.items);

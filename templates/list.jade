@@ -5,9 +5,9 @@ block content
         header(data-role='header')
         div(data-role='content')
             - if(items.length)
-                ul(data-role='listview')
-                    - items.forEach(function(item){
-                        li
-                            h3= item['title']
-                            //- img(src=item['thumbnail'], alt='Thumbnail')
-                    - })
+                - items.forEach(function(item){
+                        .lockup
+                            h3.headline= item['title']
+                            .bigpicture
+                                img(src=item['thumbnail'], alt='Thumbnail')
+                - })
