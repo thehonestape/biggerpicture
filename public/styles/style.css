@@ -115,8 +115,9 @@ a:hover {
 .lockup {
   position: relative;
   padding: 0px;
+  margin-top: -5px;
 }
-.lockup:hover .headline {
+.lockup:hover .center {
   opacity: 1;
   -ms-filter: none;
   filter: none;
@@ -128,7 +129,7 @@ a:hover {
 .bigpicture img {
   width: 100%;
 }
-.headline {
+.center {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
@@ -136,10 +137,24 @@ a:hover {
   position: absolute;
   width: 100%;
   top: 50%;
-  font-size: 2rem;
   -webkit-transition: all 2s ease-in-out;
   -moz-transition: all 2s ease-in-out;
   -o-transition: all 2s ease-in-out;
   -ms-transition: all 2s ease-in-out;
   transition: all 2s ease-in-out;
+}
+.headline {
+  font-size: 2rem;
+  display: block;
+}
+.count {
+  display: inline-block;
+  margin-top: 10px;
+}
+.count .fa {
+  margin-right: 3px;
+}
+.caption {
+  font-size: 10px;
+  color: #000;
 }
