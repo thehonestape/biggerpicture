@@ -45,7 +45,6 @@ app.get('/', function(req, res){
       //I will use regular jQuery selectors
       var $a = $(item).find('a'),
           $title = $(item).find('h2 a').text(),
-          $caption = $(item).find('.bpCaption').text(),
           $count = $(item).find('.bpBody a').text(),
           $img = $(item).find('.bpImageTop img');
 
@@ -54,7 +53,6 @@ app.get('/', function(req, res){
         self.items[i] = {
         title: $title.trim(),
         count: $count.trim(),
-        caption: $caption.trim(),
         thumbnail: $img.attr('src'),
         urlObj: url.parse($a.attr('href'), true)//parse our URL and the query string as well
       };
