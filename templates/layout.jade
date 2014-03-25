@@ -11,14 +11,26 @@ html
         link(rel='shortcut icon', href='/images/favicon.ico')
         link(rel='stylesheet', href='/styles/style.css')
         link(href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css", rel="stylesheet")
-        link(rel='stylesheet', href='http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.css')
 
         script(type='text/javascript', src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
         script(type='text/javascript', src='/js/bootstrap.min.js')
         script(type='text/javascript', src='/js/analytics.js')
+        script(type='text/javascript', src='/js/classie.js')
         script(type='text/javascript', src='/js/what.js')
 
         meta(name='viewport', content='width=device-width')
-    body
+    body.cbp-spmenu-push
+        nav.cbp-spmenu.cbp-spmenu-vertical.cbp-spmenu-left(id='cbp-spmenu-s1')
+            h3 The Bigger Picture
+            p This is an experiment that uses 
+                a(href="https://github.com/MatthewMueller/cheerio") node
+                |  to scrape the front page of the 
+                a(href="https://www.boston.com/bigpicture/") Boston Globe's Big Picture.
+            p Check out 
+                a(href="http://workhors.es") wrkhrs.co 
+                | to see what we're up to.
+            //- h4 Sources
+                a(href='https://www.boston.com/bigpicture/') Boston Globe
+        .info-button(id='showLeftPush')
         #content
             block content

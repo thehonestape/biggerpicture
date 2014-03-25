@@ -6,7 +6,8 @@
 /*
  * Grab a custom font from Google
  */
-@import url('http://fonts.googleapis.com/css?family=Inika:400,700');
+@import url('http://fonts.googleapis.com/css?family=Inika:400,700')
+@import url('http://fonts.googleapis.com/css?family=Oswald:400,300,700')
 
 /*song
  * Nib provides a CSS reset
@@ -91,3 +92,99 @@ a
 .caption
   font-size 10px
   color black
+.info-button
+  position fixed
+  left 10px
+  top 30px
+  color white
+  z-index 9999
+  transition all 0.25s ease-in-out
+  color black
+  font-size 1.2rem
+  cursor pointer
+  &:after
+    content ''
+    font-family 'FontAwesome'
+.info-button.active
+  left 235px
+
+  &:after
+    color black
+    content ''
+    font-family 'FontAwesome'
+
+.cbp-spmenu
+  background white
+  position fixed
+  color black
+  h3
+    color black
+    font-size 1.3rem
+    padding 20px
+    margin 0
+    font-weight 300
+    background #f9ec21
+    text-align center
+  h4
+    padding 10px
+    background black
+    color white
+  a
+    color dodgerblue
+    padding 0px
+  a.large
+    display block
+    color #fff
+    font-size 1.1em
+    font-weight 300
+    background dodgerblue
+    &:hover
+      background lighten(dodgerblue,10%)
+    &:active
+      background dodgerblue
+  p
+    padding 10px
+    font-family 'Oswald', sans-serif
+    font-weight 300
+    font-size 1rem
+    line-height 1.4rem
+
+/* Orientation-dependent styles for the content of the menu */
+ 
+.cbp-spmenu-vertical
+  width 240px
+  height 100%
+  top 0
+  z-index 1000
+  a.large
+    border-bottom 1px solid #258ecd
+    padding 1em
+
+
+/* Vertical menu that slides from the left or right */
+ 
+.cbp-spmenu-left
+  left -240px
+
+.cbp-spmenu-left.cbp-spmenu-open
+  left 0px
+
+
+/* Push classes applied to the body */
+ 
+.cbp-spmenu-push
+  overflow-x hidden
+  position relative
+  left 0
+
+.cbp-spmenu-push-toright
+    left 240px
+
+/* Transitions */
+ 
+.cbp-spmenu,
+.cbp-spmenu-push
+  transition all 0.3s ease
+
+
+

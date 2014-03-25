@@ -5,6 +5,7 @@
  * Grab a custom font from Google
  */
 @import url("http://fonts.googleapis.com/css?family=Inika:400,700");
+@import url("http://fonts.googleapis.com/css?family=Oswald:400,300,700");
 /*song
  * Nib provides a CSS reset
  */
@@ -232,4 +233,110 @@ a:hover {
 .caption {
   font-size: 10px;
   color: #000;
+}
+.info-button {
+  position: fixed;
+  left: 10px;
+  top: 30px;
+  color: #fff;
+  z-index: 9999;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  color: #000;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.info-button:after {
+  content: '';
+  font-family: 'FontAwesome';
+}
+.info-button.active {
+  left: 235px;
+}
+.info-button.active:after {
+  color: #000;
+  content: '';
+  font-family: 'FontAwesome';
+}
+.cbp-spmenu {
+  background: #fff;
+  position: fixed;
+  color: #000;
+}
+.cbp-spmenu h3 {
+  color: #000;
+  font-size: 1.3rem;
+  padding: 20px;
+  margin: 0;
+  font-weight: 300;
+  background: #f9ec21;
+  text-align: center;
+}
+.cbp-spmenu h4 {
+  padding: 10px;
+  background: #000;
+  color: #fff;
+}
+.cbp-spmenu a {
+  color: #1e90ff;
+  padding: 0px;
+}
+.cbp-spmenu a.large {
+  display: block;
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 300;
+  background: #1e90ff;
+}
+.cbp-spmenu a.large:hover {
+  background: #359bff;
+}
+.cbp-spmenu a.large:active {
+  background: #1e90ff;
+}
+.cbp-spmenu p {
+  padding: 10px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+/* Orientation-dependent styles for the content of the menu */
+.cbp-spmenu-vertical {
+  width: 240px;
+  height: 100%;
+  top: 0;
+  z-index: 1000;
+}
+.cbp-spmenu-vertical a.large {
+  border-bottom: 1px solid #258ecd;
+  padding: 1em;
+}
+/* Vertical menu that slides from the left or right */
+.cbp-spmenu-left {
+  left: -240px;
+}
+.cbp-spmenu-left.cbp-spmenu-open {
+  left: 0px;
+}
+/* Push classes applied to the body */
+.cbp-spmenu-push {
+  overflow-x: hidden;
+  position: relative;
+  left: 0;
+}
+.cbp-spmenu-push-toright {
+  left: 240px;
+}
+/* Transitions */
+.cbp-spmenu,
+.cbp-spmenu-push {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
