@@ -1,2 +1,2 @@
-pullquote
+The Bigger Picture
 =========
