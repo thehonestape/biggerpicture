@@ -236,43 +236,58 @@ a:hover {
 }
 .info-button {
   position: fixed;
-  left: 10px;
-  top: 30px;
+  left: 0px;
+  top: 0px;
   color: #fff;
-  z-index: 9999;
-  -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
-  -ms-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
+  z-index: 10;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   color: #000;
-  font-size: 1.2rem;
+  font-size: 20px;
+  text-align: center;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
+  background: #000;
+  overflow: hidden;
+  line-height: 48px;
+}
+.info-button:hover {
+  background: #1a1a1a;
 }
 .info-button:after {
-  content: '';
-  font-family: 'FontAwesome';
+  content: 'i';
+  color: #fff;
 }
 .info-button.active {
-  left: 235px;
+  left: 240px;
+  background: #ff6347;
 }
 .info-button.active:after {
-  color: #000;
-  content: '';
-  font-family: 'FontAwesome';
+  color: #fff;
+  content: 'x';
+}
+.info-button.active:hover {
+  background: #ff5537;
 }
 .cbp-spmenu {
   background: #fff;
   position: fixed;
   color: #000;
 }
+.cbp-spmenu .title {
+  height: 50px;
+  line-height: 50px;
+  background: #f9ec21;
+}
 .cbp-spmenu h3 {
   color: #000;
   font-size: 1.3rem;
-  padding: 20px;
   margin: 0;
   font-weight: 300;
-  background: #f9ec21;
   text-align: center;
 }
 .cbp-spmenu h4 {
@@ -334,9 +349,9 @@ a:hover {
 /* Transitions */
 .cbp-spmenu,
 .cbp-spmenu-push {
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }

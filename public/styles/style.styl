@@ -94,36 +94,46 @@ a
   color black
 .info-button
   position fixed
-  left 10px
-  top 30px
+  left 0px
+  top 0px
   color white
-  z-index 9999
-  transition all 0.25s ease-in-out
+  z-index 10
+  transition all .3s ease-in-out
   color black
-  font-size 1.2rem
+  font-size 20px
+  text-align center
+  width 50px
+  height 50px
   cursor pointer
+  background black
+  overflow hidden
+  line-height 48px
+  &:hover 
+    background lighten(#000000,10%)
   &:after
-    content ''
-    font-family 'FontAwesome'
+    content 'i'
+    color white
 .info-button.active
-  left 235px
-
+  left 240px
+  background tomato
   &:after
-    color black
-    content ''
-    font-family 'FontAwesome'
-
+    color white
+    content 'x'
+  &:hover
+    background darken(tomato,5%)
 .cbp-spmenu
   background white
   position fixed
   color black
+  .title
+    height 50px
+    line-height 50px
+    background #f9ec21
   h3
     color black
     font-size 1.3rem
-    padding 20px
     margin 0
     font-weight 300
-    background #f9ec21
     text-align center
   h4
     padding 10px
@@ -184,7 +194,7 @@ a
  
 .cbp-spmenu,
 .cbp-spmenu-push
-  transition all 0.3s ease
+  transition all 0.3s ease-in-out
 
 
 
