@@ -1,0 +1,20 @@
+extend layout
+
+block content
+    div(data-role='page')
+        header(data-role='header')
+        div(data-role='content')
+            - if(items.length)
+                - items.forEach(function(item){
+                        .lockup
+                            a.center(href='/pictures' + item['urlObj'].path, title=item['title'])
+                                .headline
+                                    h3=item['title']
+                                    hr
+                                    .count
+                                        span.icon
+                                            i.fa.fa-picture-o.fa-lg
+                                        span=item['count']
+                            a.bigpicture(href='/pictures', title=item['title'])
+                                img(src=item['thumbnail'], alt='Thumbnail')
+                - })

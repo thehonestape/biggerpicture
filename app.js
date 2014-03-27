@@ -60,7 +60,7 @@ app.get('/', function(req, res){
       console.log(self.items);
     //We have all we came for, now let's build our views
     res.render('list', {
-      title: 'NodeTube',
+      title: 'The Bigger Picture',
       items: self.items
                       });
               });
