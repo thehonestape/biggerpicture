@@ -29,7 +29,7 @@ app.use(express.static(__dirname + '/public'))
 
 app.get('/', function(req, res){
   //Tell the request that we want to fetch youtube.com, send the results to a callback function
-      request({uri: 'https://www.boston.com/bigpicture/'}, function(err, response, body){
+    request({uri: 'http://www.bostonglobe.com/news/bigpicture/'}, function(err, response, body){
               var self = this;
     self.items = new Array();//I feel like I want to save my results in an array
     //Just a basic error check
@@ -39,22 +39,23 @@ app.get('/', function(req, res){
     //Use jQuery just as in any regular HTML page
       var $ = cheerio.load(body)
       , $body = $('body')
-      , $headlines = $body.find('.headDiv2');
+      , $headlines = $body.find('section');
     //for each one of those elements found
         $headlines.each(function(i, item){
       //I will use regular jQuery selectors
-      var $a = $(item).find('a'),
-          $title = $(item).find('h2 a').text(),
+      var $a = $(item).find('.photo a'),
+          $title = $(item).find('h3 a').text(),
           $count = $(item).find('.bpBody a').text(),
-          $img = $(item).find('.bpImageTop img');
+          $img = $(item).find('.photo img');
 
 
       //and add all that data to my items array
         self.items[i] = {
+        href: $a.attr('href'),
         title: $title.trim(),
         count: $count.trim(),
         thumbnail: $img.attr('src'),
-        urlObj: url.parse($a.attr('href'), true)//parse our URL and the query string as well
+        urlObj: url.parse('http://bostonglobe.com' + $a.attr('href'), true)//parse our URL and the query string as well
       };
                       });
       console.log(self.items);
@@ -65,8 +66,6 @@ app.get('/', function(req, res){
                       });
               });
 });
-
-
 
 app.listen(process.env.PORT || 3000, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
